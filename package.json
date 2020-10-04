@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "npx del dist",
+    "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
+    "start": "npm run serve",
+    "build": "ELEVENTY_ENV=dev npx eleventy",
+    "build:prod": "ELEVENTY_ENV=prod npx eleventy",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "del-cli": "^3.0.0"
   },
   "repository": {
     "type": "git",
