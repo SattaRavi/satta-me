@@ -4,7 +4,12 @@ module.exports = function (eleventyConfig) {
 
   // set input and output folder
   return {
-    dir: { input: "src", output: "dist" },
+    dir: {
+      input: "src",
+      output: "dist",
+      layouts: "layouts",
+      _includes: "components",
+    },
     dataTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
   };
