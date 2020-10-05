@@ -8,7 +8,6 @@ module.exports = function (eleventyConfig) {
       input: "src",
       output: "dist",
       layouts: "layouts",
-      _includes: "components",
     },
     dataTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
