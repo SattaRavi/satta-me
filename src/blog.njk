@@ -1,16 +1,23 @@
 ---
-layout: base.njk
+layout: blog.njk
 pagination:
   data: collections.post
   size: 10
   reverse: true
   alias: posts
 ---
-{% for post in posts %}
-    <article>
-        <h1>
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-        </h1>
-        {{ post.date }}
-    </article>
-{% endfor %}
+
+<div class="tile is-vertical is-ancestor">
+    {% for post in posts %}
+        <div class="tile is-parent">
+            <div class="tile is-child box">
+                <article>
+                    <h1>
+                        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+                    </h1>
+                    {{ post.date }}
+                </article>
+            </div>
+        </div>
+    {% endfor %}
+</div>
